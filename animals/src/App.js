@@ -1,3 +1,4 @@
+import './App.css'
 import { useState } from "react";
 import AnimalShow from "./AnimalShow";
 
@@ -17,12 +18,12 @@ function App() {
   })
   
   return (
-    <div>
+    <div className='app'>
       <button onClick={() => {
         setAnimals([...animals, getRamdomAnimal()])
       }
       }>Add Animal</button>
-      <dev>{renderedAnimal}</dev>
+      <div className='animal-list'>{renderedAnimal}</div>
     </div>
   );
 }
